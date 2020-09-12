@@ -3,7 +3,7 @@
 import { getPackageName } from '@atxm/get-package-name';
 import * as console from '@atxm/developer-console';
 
-function openPackageSettings(userOptions: OpenPackageOptions = {}): void {
+async function openPackageSettings(userOptions: OpenPackageOptions = {}): Promise<void> {
   const options: OpenPackageOptions = {
     pending: true,
     searchAllPanes: true,
@@ -16,7 +16,7 @@ function openPackageSettings(userOptions: OpenPackageOptions = {}): void {
     console.error('Package name not found');
   }
 
-  atom.workspace.open(`atom://config/packages/${packageName}`, options);
+  await atom.workspace.open(`atom://config/packages/${packageName}`, options);
 }
 
 export {

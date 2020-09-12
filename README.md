@@ -18,7 +18,9 @@ Opens package settings for the Atom package that consumes this module
 ```js
 import { openPackageSettings } from '@atxm/open-package-settings';
 
-openPackageSettings();
+(async () => {
+    openPackageSettings();
+})();
 ```
 
 ### Options
