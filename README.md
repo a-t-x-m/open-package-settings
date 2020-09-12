@@ -19,7 +19,7 @@ Opens package settings for the Atom package that consumes this module
 import { openPackageSettings } from '@atxm/open-package-settings';
 
 (async () => {
-    openPackageSettings();
+    await openPackageSettings();
 })();
 ```
 
